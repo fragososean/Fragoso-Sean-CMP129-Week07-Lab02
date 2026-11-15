@@ -3,17 +3,25 @@ public final class ImmutableStudent {
     // TODO: Create two private final fields:
     // 1. name (String)
     // 2. age (int)
-
+    private final String Name;
+    private final int Age;
 
     // TODO: Create a constructor that receives name and age.
     // The constructor should initialize both fields.
-
+    public ImmutableStudent(String n, int a){
+        this.Name = n;
+        this.Age = a;
+    }
 
     // TODO: Create a getter for name.
-
+    public String getName(){
+        return Name;
+    }
 
     // TODO: Create a getter for age.
-
+    public int getAge(){
+        return Age;
+    }
 
     // IMPORTANT:
     // Do NOT create setter methods in this class.
@@ -22,4 +30,7 @@ public final class ImmutableStudent {
 
     // TODO: Create a displayInfo() method.
     // Display the student's name and age.
+    public void displayInfo(){
+        System.out.print("Name: "+getName()+"\t"+"Age: "+getAge());
+    }
 }
